@@ -1,0 +1,127 @@
+*, *::before,*::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    font-size: 15pt;
+  
+}
+.box-container{
+  width: 200px;
+  border: 1px crimson solid;
+  min-height: 100px;
+  
+}
+.box-container p{
+  padding: 5px;
+  text-align: center;
+}
+.box{
+  background-color:#555;
+  width:200px;
+  height:100px;
+}
+.triangle-down {
+	width: 0;
+	height: 0;
+	border-left: 40px solid transparent;
+	border-right: 40px solid transparent;
+	border-top: 20px solid #555;
+	margin: auto;
+}
+
+.triangulo{
+  position: relative;
+  height: 100px;
+  width: 175px;
+  margin: 10px auto;
+}
+
+.triangulo.dir {
+  background-color: brown;
+}
+.triangulo.esq {
+  background-color: blueviolet;
+}
+
+.triangulo.sup {
+  background-color: deeppink;
+}
+
+.triangulo.inf {
+  background-color: darkcyan;
+}
+
+
+
+.triangulo::after {
+  content: "";
+  position: absolute;
+   border-width: 25px;
+   border-style: solid;
+  
+}
+
+.triangulo.dir::after{
+  top:25%;
+  left: 100%;
+  margin-top: 0px;
+  border-width: 25px;
+  border-color: transparent transparent transparent brown;
+}
+
+
+.triangulo.esq::after{
+  top: 25%;
+  right: 100%;
+  margin-top: 0px;
+  border-width: 25px;
+  border-color: transparent blueviolet transparent transparent ;
+}
+
+
+.triangulo.sup::after{
+  left: 36%;
+  bottom: 100%;
+  margin-top: 0px;
+  border-width: 25px;
+  border-color: transparent transparent deeppink transparent ;
+  
+}
+
+
+.triangulo.inf::after{
+  left: 36%;
+  top: 100%;
+  margin-top: 0px;
+  border-width: 25px;
+  border-color: darkcyan transparent transparent transparent;
+}
+
+.p2{
+  margin: auto;
+  height: 80%;
+  background-color: transparent;
+  display: flex;
+  transform: skewX(15deg)
+    rotate(-3deg);
+}
+.p2 h1{
+  text-align: center;
+  margin: auto;
+  color: crimson
+}
+.matriz{
+  width: 80%;
+  height: 100px;
+  bbackground-color: #2B532E;
+  margin: 30px auto;
+  display: flex;
+  border-radius: 15px;
+  border: 2px solid crimson;
+  transform: skewX(-15deg)
+    rotate(3deg);
+  
+}
